@@ -1,44 +1,26 @@
+import React from 'react';
 import './App.css';
-import './Header';
-import './Main';
-import './Footer';
-<>
-<header>
-  <meta title='Little Lemon Restaurant'
-  description='Mediterranean restaurant in Chicago'
-  language='english'
-  author='Riccardo'
-  charset="utf-8"
-  http-equiv='text/html'
-  http-equiv="refresh" content="300"
-  name="format-detection" content="telephone=yes"
-  HandheldFriendly="true"
-  viewport="width=device-width, initial-scale=1.0"
-  />
-</header>
+import Head from './components/Header';
+import Nav from './components/Nav';
+import Description from './components/Description';
+import Highlight from './components/Highlight';
+import Testimonials from './components/Testimonials';
+import About from './components/About';
+import Footer from './components/Footer';
+<link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Tangerine"></link>
 
-<main>
-    <nav>
-        <img src="/assets/Logo.svg" name="Restaurant's logo" />
-        <ul>
-          <li><a href='/about'>About</a></li>;
-          <li>Menu</li>;
-          <li>Reservations</li>;
-          <li>Order Online</li>;
-          <li>Login</li>;
-        </ul>
-    </nav>
-</main>
-
-<footer>
-
-</footer>
-</>
-function App()
-return (
-<className />= <"App"/>
-);
-
+function App()  {
+  return (
+    <main>
+      <Nav />
+      <Description />
+      <Highlight />
+      <Testimonials />
+      <About />
+      <Footer />
+    </main>)
+}
 
 export default App;
 
