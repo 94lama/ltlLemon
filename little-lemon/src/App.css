@@ -10,7 +10,7 @@
 
 .App-header {
   background-color: #000;
-  height: 12vh;
+  height: 110px;
   display: flex;
   flex-direction: row;
   align-items:center;
@@ -36,7 +36,7 @@
 .navigator {
   display: flex;
   justify-content: space-between;
-  width:screensize;
+  width:;
   padding: 0 5% 0 5%;
   height: 120px;
   color: white;
@@ -55,12 +55,13 @@
 
 .description {
   display: grid;
-  padding: 5% 4% 5% 4%;
+  padding: 5% 4% 5% 7%;
   grid-template-rows: 20rem;
+  height: 730px;
   column-gap: 20px;
-  border-width: 50px;
   justify-items: center;
-  background: -webkit-linear-gradient(270deg, #495E57 72%, #ffff 0%);}
+  justify-self: center;
+  background: -webkit-linear-gradient(270deg, #495E57 70%, #ffff 0%);}
 
 .textDesc p {
     color: #ffff;
@@ -68,11 +69,57 @@
 
 .description a {
   position: relative;
-  top: 50px;
+  top: 180px;
   grid-area: 2 / 1 /span 1/span 1;}
 
 .foodList {
   display: flex;}
+
+.high{
+  display: flex;
+  margin: 2%;
+  justify-content:space-around;}
+
+.high a {
+  grid-area: 1 / 2 / span 1 / span 1;}
+
+.about{
+  display: grid;
+  grid-template-areas: 'text imgs';
+  background-color:#eee;
+  align-content: center;
+  height: 950px;}
+
+.img1 {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  object-position: 90% 0%;
+  z-index: 1;
+  top: 200px;
+  left: -200px;}
+
+.img2{
+  position: relative;
+  z-index: 2;
+  width: 500px;
+  height: 500px;
+  object-fit:cover;
+  object-position: 90% 0%;
+  top: -200px;
+  left: 200px;}
+
+.footer{
+  display: flex;
+  width: 100%;
+  padding: 50px;
+  gap: 50px;
+  align-items: center;
+  justify-content:space-evenly;
+  background-color: #000;
+  color: #fff;
+  height: 500px;}
 
 
 /*Fonts------------*/
@@ -91,38 +138,40 @@
   font-weight: normal;
   color: #ffff;}
 
-h1 { /*Heading*/
-  font-family: Karla;
+h1{ /*Heading*/
+  font-family: 'Karla';
   font-size: 36pt;
   font-weight: bold;}
 
-h2 { /*Section title*/
-  font-family: 'Karla';
+h2{ /*Section title*/
   font-size: 20pt;
+  font-family: 'Karla';
   font-weight: bolder;
+  line-height: 1.5;
   text-transform: uppercase;}
 
 h3{ /*Lead text*/
   font-family: 'Karla';
-  font-size: 18;}
+  font-size: 18pt;}
 
-h4 { /*Card title*/
+h4{ /*Card title*/
   font-family: 'Karla';
-  font-size: 18;
+  font-size: 18pt;
   font-weight: bold;}
 
 p{ /*Paragraph*/
   font-size: 16pt;
   font-family: 'Karla';
-  font-weight: normal;
   text-align: justify;
-  line-height: 1.5;}
+  text-decoration: none;
+  font-weight: normal;
+  line-height: 1.1;}
 
 .imgSqrd {
-  border-radius: 20px;
+  border-radius: 50px;
   object-fit: cover;
-  min-width: 500px;
-  height: 450px;}
+  min-width: 600px;
+  height: 550px;}
 
 .imgDesc {
   grid-area: 1 / 2 /span 1/span 2;}
@@ -130,17 +179,35 @@ p{ /*Paragraph*/
 
 /*Objects----------*/
 
-button {
+.button{
   width: 300px;
   height: 60px;
-  background-color: black;
-  color: white;
+  background-color: #000;
+  color: #fff;
   border-radius: 30px;
   font-family: 'Karla';
   font-size: 20pt;
   font-weight: bolder;
   text-transform: uppercase;}
 
-button:link {
-  text-decoration: none;
-  color: #fff;}
+.button:link {
+  text-decoration: none;}
+
+.star-rating{
+  display: flex;
+  justify-items: center;
+  width: 300px;
+}
+
+.star{
+  font-size: 25pt;
+  color: #999;
+}
+
+.star:hover{
+  font-size: 27pt;
+  color: #F4CE14;}
+
+  .star::selection{
+    font-size: 27pt;
+    color: #F4CE14;}

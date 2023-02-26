@@ -1,6 +1,6 @@
 import restaurant from "../assets/icons_assets/restauranfood.jpg";
 
-function Description () {
+const Description = () => {
     return (
         <div className="description">
             <section className="textDesc">
@@ -11,8 +11,8 @@ function Description () {
             <div className="imgDesc">
                 <img src={restaurant} alt="A dish serving" className="imgSqrd" />
             </div>
-            <a href="/order"><button>Book a table</button></a>
+            <a href="/order"><button class='button'>Book a table</button></a>
         </div>
     )}
 
-export default Description;
+    export default Description;
