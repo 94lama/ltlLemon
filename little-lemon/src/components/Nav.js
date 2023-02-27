@@ -4,7 +4,7 @@ import logo_ from '../assets/icons_assets/Logo .svg'
 function Nav () {
     return (
     <div className='App-header'>
-        <a href='/'>
+        <a href={'/'}>
             <source srcSet={logo} media="(min-width: 901px)"/>
             <source srcSet={logo_} media="(max-width: 901px)"/>
             <img src={logo_} alt="Little Lemon logo" height="110px" className='App-logo'/>

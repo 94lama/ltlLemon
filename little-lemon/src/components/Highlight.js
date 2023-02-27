@@ -11,7 +11,7 @@ const Highlight = () => {
         <div>
             <div className='high'>
                 <Heading as='textDesc'>This weeek's specials</Heading>
-                <Button class='button' href='/menu'>Online menu</Button>
+                <Button class='button' href='/Order'>Online menu</Button>
             </div>
             <HStack overflowX='scroll' width='96%' margin='2%'>
                 <Specials

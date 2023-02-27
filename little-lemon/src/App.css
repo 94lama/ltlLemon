@@ -10,7 +10,10 @@
 
 .App-header {
   background-color: #000;
+  position: fixed;
+  z-index: 10;
   height: 110px;
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items:center;
@@ -36,7 +39,7 @@
 .navigator {
   display: flex;
   justify-content: space-between;
-  width:;
+  width:100%;
   padding: 0 5% 0 5%;
   height: 120px;
   color: white;
@@ -55,9 +58,9 @@
 
 .description {
   display: grid;
-  padding: 5% 4% 5% 7%;
+  padding: 8% 4% 5% 7%;
   grid-template-rows: 20rem;
-  height: 730px;
+  height: 800px;
   column-gap: 20px;
   justify-items: center;
   justify-self: center;
@@ -67,7 +70,7 @@
     color: #ffff;
     max-width: 500px;}
 
-.description a {
+.description button {
   position: relative;
   top: 180px;
   grid-area: 2 / 1 /span 1/span 1;}
@@ -196,13 +199,11 @@ p{ /*Paragraph*/
 .star-rating{
   display: flex;
   justify-items: center;
-  width: 300px;
-}
+  width: 300px;}
 
 .star{
   font-size: 25pt;
-  color: #999;
-}
+  color: #999;}
 
 .star:hover{
   font-size: 27pt;
@@ -211,3 +212,76 @@ p{ /*Paragraph*/
   .star::selection{
     font-size: 27pt;
     color: #F4CE14;}
+
+
+
+    {box-sizing: border-box;}
+
+    /* The popup form - hidden by default */
+    .form-popup {
+      display: none;
+      position: inherit;
+      z-index:8;
+    }
+
+    /* Add styles to the form container */
+    .form-container {
+      display: flex;
+      color: #000;
+      flex-direction: column;
+      row-gap: 15px;
+      align-items: center;
+      justify-items: center;
+      width: 500px;
+      z-index: 8;
+      position: relative;
+      top: 200px;
+      right: 90px;
+      height: 900px;
+      padding: 50px;
+      background-color: #495E57;
+      border-radius: 50px;
+    }
+
+
+/* Full-width input fields */
+.form-container input {
+  width: 300px;
+  border-radius: 20px;
+  height: 50px;
+  padding: 20px;
+  margin: 20px;
+  background: #fff;
+}
+
+.form-container text {
+  height: 40px;
+  margin: 20px;
+  background: #fff;}
+
+/* When the inputs get focus, do something */
+.form-container input:focus {
+  background-color: #eee;
+  text-decoration-color: #000;
+  outline: none;}
+
+/* Set a style for the submit/login button */
+.form-container button {
+  top: 40px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  align-self: center;
+  opacity: 0.8;}
+
+.form-container label {
+  display: flex;
+  flex-direction: row;
+  align-self: center justify;
+  justify-content: center;}
+
+/* Add some hover effects to buttons */
+.form-container .button:hover, .open-button:hover {
+  opacity: 1;
+  scale: 1.1;
+}

@@ -6,19 +6,20 @@ import About from './components/About'
 import Description from './components/Description'
 import Footer from './components/Footer'
 
-const Home = () => {
-  <Header />
+function Home() {
+  <Header />;
   return (
     <div>
-        <Nav />
-        <Description />
-        <center><hr width="90%"/></center>
-        <Highlight />
-        <center><hr width="90%"/></center>
-        <Testimonials />
-        <About />
-        <Footer />
+      <Nav />
+      <Description />
+      <center><hr width="90%" /></center>
+      <Highlight />
+      <center><hr width="90%" /></center>
+      <Testimonials />
+      <About />
+      <Footer />
     </div>
-    )}
+  );
+}
 
     export default Home;

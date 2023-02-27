@@ -2,13 +2,6 @@ import './App.css';
 import React from 'react';
 import {Suspense, lazy} from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-/* import Home from './components/Home'
-import Nav from './components/Nav';
-import Highlight from './components/Highlight';
-import Testimonials from './components/Testimonials';
-import About from './components/About';
-import Description from './components/Description';
-import Footer from './components/Footer'; */
 import Layout from './Layout';
 
 const Home = lazy(() => import('./Home'));
@@ -21,20 +14,22 @@ const Footer = lazy(() => import('./components/Footer'));
 
 
 const App = () => {
+
+  const headerRef = useRef(null);
+
   return(
-    //<Home />
     <Router>
       <Suspense fallback={<div>...Loading</div>}>
         <Routes>
-          <Route path='/' element={<Layout />}>
-          <Route index element={<Home />} />
+          <Route path='/' element={<Layout />} >
+          <Route index element={<Home />} ref={headerRef} />
           <Nav />
-          <Route path="/Description" element={<Description />} />
+          <Route path="/Description" element={<Description />} ref={headerRef} />
           <center><hr width="90%"/></center>
-          <Route path="/Highlight" element={<Highlight />} />
+          <Route path="/Highlight" element={<Highlight />} ref={headerRef} />
           <center><hr width="90%"/></center>
           <Route path="/Testimonials" element={<Testimonials />} />
-          <Route path="/About" element={<About />} />
+          <Route path="/About" element={<About />} ref={headerRef} />
           <Route path="/Footer" element={<Footer />} />
           </Route>
         </Routes>

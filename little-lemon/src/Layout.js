@@ -1,27 +1,39 @@
 import { Outlet, Link } from "react-router-dom";
 
 const Layout = () => {
+
+  const handleClick = (anchor) => () => {
+    const id = `${anchor}-section`;
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
   return (
     <>
       <nav>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/" onClick={handleClick('home')}>Home</Link>
           </li>
           <li>
-            <Link to="/Description">Description</Link>
+            <Link to="/description">Description</Link>
           </li>
           <li>
-            <Link to="/Highlight">Highlight</Link>
+            <Link to="/highlight">Highlight</Link>
           </li>
           <li>
-            <Link to="/Testimonials">Testimonials</Link>
+            <Link to="#/testimonials">Testimonials</Link>
           </li>
           <li>
-            <Link to="/About">About</Link>
+            <Link to="#about" onClick={handleClick('about')}>About</Link>
           </li>
           <li>
-            <Link to="/Footer">Footer</Link>
+            <Link to="#footer">Footer</Link>
           </li>
         </ul>
       </nav>

@@ -22,5 +22,5 @@ export default function Index () {
 
 reportWebVitals(console.log);
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root')/*.addEventListener('click', function(event){event.preventDefault()})*/);
 root.render(<Index />);
