@@ -2,6 +2,7 @@ import { Text } from "@chakra-ui/react"
 import BookingSlot from "./BookingSlot";
 import React from "react";
 import { fetchAPI, submitAPI } from './temp.js';
+//import {day, date, Options} from './formData'
 
 var Options = [
     {id:'17:00', disabled: false,},
@@ -27,6 +28,11 @@ function initializeTimes(e) {
 function availableTimes(e) {
     initializeTimes()
     const hour = document.getElementById('res-time').value;
+    var selectobject = document.getElementById("mySelect");
+    for (var i=0; i<selectobject.length; i++) {
+        if (selectobject.options[i].value === hour)
+            selectobject.disabled(i);
+        }
     Options.getElementById(hour).disabled=true;
     e.preventDefault()
 
@@ -60,9 +66,9 @@ function BookingForm() {
         e.preventDefault();}
 
     return (
-        <div>
+        <section>
             <button class="button" id='open-button' onClick={openForm}>Book a table</button>
-            <div class="form-popup" id="myForm">
+            <section class="form-popup" id="myForm">
                 <form class="form-container">
                     <Text color='#fff'>Hello!</Text>
                     <label for='name'>
@@ -98,8 +104,8 @@ function BookingForm() {
                     <button type="submit" class="button"  onClick={sendForm }>Reserve</button>
                     <button type='reset' class="button" onClick={closeForm}>Close</button>
                 </form>
-            </div>
-        </div>
+            </section>
+        </section>
     );
 }
 

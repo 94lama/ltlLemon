@@ -3,6 +3,7 @@ import React from 'react';
 import {Suspense, lazy} from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './Layout';
+import {day, date, Options} from './comopnents/data'
 
 const Home = lazy(() => import('./Home'));
 const Nav = lazy(() => import('./components/Nav'));
@@ -11,6 +12,7 @@ const Testimonials = lazy(() => import('./components/Testimonials'));
 const About = lazy(() => import('./components/About'));
 const Description = lazy(() => import('./components/Description'));
 const Footer = lazy(() => import('./components/Footer'));
+const Data = lazy(() => import('./components/data'));
 
 
 const App = () => {

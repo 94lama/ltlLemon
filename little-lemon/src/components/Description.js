@@ -5,17 +5,17 @@ import restaurant from "../assets/icons_assets/restauranfood.jpg";
 function Description() {
 
     return (
-        <div className="description">
+        <main className="description">
             <section className="textDesc">
-                <text className="Title">Little Lemon</text><br />
-                <text className="WhereAreWe">Chicago, somewhere st.</text>
+                <h1 className="Title">Little Lemon</h1><br/>
+                <h3 className="WhereAreWe">Chicago, somewhere st.</h3>
                 <p>We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
             </section>
-            <div className="imgDesc">
+            <aside className="imgDesc">
                 <img src={restaurant} alt="A dish serving" className="imgSqrd" />
-            </div>
+            </aside>
            <BookingForm />
-        </div>
+        </main>
     );}
 
     export default Description;

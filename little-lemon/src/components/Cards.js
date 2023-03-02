@@ -4,9 +4,9 @@ import basket from '../assets/icons_assets/basket .svg'
 
 function Specials (props) {
     return (
-        <Card variant='outline' width='550px' borderRadius='50px' margin='10px' backgroundColor='#eeee' height='780px' flexShrink='0'>
+        <Card variant='outline' maxWidth='24rem' borderRadius='50px' margin='10px' backgroundColor='#eeee' max-height='40rem' flexShrink='0'>
             <CardHeader padding='0'>
-                <Image src={props.img} alt="img" borderRadius='50px' width='full' height='400px' objectFit='cover' />
+                <Image src={props.img} alt="img" borderRadius='50px' minWidth='100%' maxWidth='24rem' height='20rem' objectFit='cover' />
             </CardHeader>
             <CardBody>
                 <Flex justifyContent='space-between' height='60px'>
@@ -15,8 +15,8 @@ function Specials (props) {
                 </Flex>
                 <Text as='p' noOfLines='8'>{props.description}</Text>
             </CardBody>
-            <CardFooter justifyContent='right'>
-                <Button _activeLink="/basket" width='50px' height='50px' padding='0' backgroundColor='transparent'><Image src={basket} /></Button>
+            <CardFooter justifyContent='right' padding='0 1.5rem 1.5rem 0'>
+                <Button _activeLink="/basket" minHeight='20px' maxHeight='50px' padding='0' backgroundColor='transparent'><Image src={basket} /></Button>
             </CardFooter>
         </Card>
     )}

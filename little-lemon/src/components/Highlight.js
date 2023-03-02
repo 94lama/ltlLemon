@@ -8,11 +8,11 @@ import greek_salad from '../assets/icons_assets/greek salad.jpg'
 const Highlight = () => {
 
     return(
-        <div>
-            <div className='high'>
+        <main>
+            <section className='high'>
                 <Heading as='textDesc'>This week's specials</Heading>
                 <Button class='button' href='/Order'>Online menu</Button>
-            </div>
+            </section>
             <HStack overflowX='scroll' width='96%' margin='2%'>
                 <Specials
                     img={salad}
@@ -75,7 +75,7 @@ const Highlight = () => {
                     description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
                     />
             </HStack>
-        </div>
+        </main>
     )}
 
 export default Highlight;

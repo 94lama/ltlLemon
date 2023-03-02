@@ -9,7 +9,7 @@ import Footer from './components/Footer'
 function Home() {
   <Header />;
   return (
-    <div>
+    <main>
       <Nav />
       <Description />
       <center><hr width="90%" /></center>
@@ -18,7 +18,7 @@ function Home() {
       <Testimonials />
       <About />
       <Footer />
-    </div>
+    </main>
   );
 }
 
