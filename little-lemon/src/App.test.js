@@ -1,8 +1,9 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { getByLabelText, getByTestId, render, screen } from '@testing-library/react';
+import Book from './components/Book';
 
 test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  render(<Book />);
+  const buttonElement = screen.getByText('Book a table');
+  //expect(buttonElement).toBeInTheDocument();
+  expect(buttonElement).toBeInTheDocument();
 });

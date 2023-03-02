@@ -215,7 +215,7 @@ p{ /*Paragraph*/
 
 
 
-    {box-sizing: border-box;}
+  /*{box-sizing: border-box;}*/
 
     /* The popup form - hidden by default */
     .form-popup {
@@ -237,12 +237,18 @@ p{ /*Paragraph*/
       position: relative;
       top: 200px;
       right: 90px;
-      height: 900px;
+      height: 1000px;
       padding: 50px;
       background-color: #495E57;
       border-radius: 50px;
     }
 
+.form-container select{
+  width: 300px;
+  height: 50px;
+  margin: 20px;
+  border-radius: 20px;
+}
 
 /* Full-width input fields */
 .form-container input {
@@ -284,4 +290,22 @@ p{ /*Paragraph*/
 .form-container .button:hover, .open-button:hover {
   opacity: 1;
   scale: 1.1;
+}
+
+.form-status {
+  display: flex;
+  color: #000;
+  flex-direction: column;
+  row-gap: 15px;
+  align-items: center;
+  justify-items: center;
+  width: 500px;
+  z-index: 2;
+  position: relative;
+  top: 250px;
+  right: 90px;
+  height: 400px;
+  padding: 50px;
+  background-color: #F4CE14;
+  border-radius: 50px;
 }

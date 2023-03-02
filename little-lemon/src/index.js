@@ -10,6 +10,7 @@ export default function Index () {
   return(
   <React.StrictMode>
     <ChakraProvider>
+    <script src="https://raw.githubusercontent.com/Meta-Front-End-Developer-PC/capstone/master/api.js"></script>
       <Home />
     </ChakraProvider>
   </React.StrictMode>
