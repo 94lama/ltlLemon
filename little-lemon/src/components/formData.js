@@ -1,4 +1,4 @@
-/* import React from "react";
+import React from "react";
 
 class FormData extends React.Component {
     constructor(props) {
@@ -24,4 +24,4 @@ class FormData extends React.Component {
     }
 }
 
-export default FormData; */
+export default FormData;
